@@ -47,4 +47,11 @@ console.log(new_un); //this will remain NaN.
 let isLogged = 1;
 let nnn = Boolean(isLogged)
 
-console.log(nnn); // answer is "true"
+console.log(nnn); // answer is "true" 
+
+
+
+//optrations in  this.
+//let num = 3;
+let negtivenum = -num;
+console.log(negtivenum) ;   //output will be -3.
