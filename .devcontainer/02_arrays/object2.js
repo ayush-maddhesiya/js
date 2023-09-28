@@ -36,6 +36,8 @@ const obj2  ={3:"c",4:"d"}
 //soo
 const obj3  = Object.assign(obj1,obj2)
 //or 
+const obj4  = {...obj1,...obj2}
+//you can print it 
 
 
 
