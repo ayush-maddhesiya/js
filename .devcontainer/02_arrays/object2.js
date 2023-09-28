@@ -39,4 +39,23 @@ const obj3  = Object.assign(obj1,obj2)
 
 
 
+
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
+
+
 console.log(obj3);
