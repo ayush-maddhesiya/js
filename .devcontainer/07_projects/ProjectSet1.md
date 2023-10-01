@@ -228,5 +228,37 @@ h1 {
 ## javaSrcipt
 
 ```javascript
+const from = document.querySelector("form");
 
+from.addEventListener('submit',function (e){
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector("#height").value);
+  const weight = parseInt(document.querySelector("#weight").value);
+
+  //now cheak the that value enter is right or not
+  if(height === "" || height <= 0 || isNaN(height)){
+    results.innerHTML = `Please give a valid Height ${height}`;
+  }else if(weight === "" || weight <= 0 || isNaN(weight)){
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  }
+  else{
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+    //print the answer which BMI
+
+    if(bmi <= 18.6){
+    results.innerHTML = `<span>You are Under Weigth and you BMI is : ${bmi}</span>`
+
+    }else if(bmi > 18.6 && bmi < 24.9){
+    results.innerHTML = `<span>You are Normal  Weigth and you BMI is : ${bmi}</span>`
+    }
+    else{
+    results.innerHTML = `<span>You are Over Weigth and you BMI is : ${bmi}</span>`
+
+    }
+    // results.innerHTML = `<span>${bmi}</span>`
+  }
+
+});
 ```
