@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JAVAScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(() => {
+    //     console.log("ayush",Date.now());
+    // }, 1000);
+    
+
+    const myName = function(str){
+        console.log(str,' ayush',Date.now());
+    }
+    // //this is show that SetInterval can also take a parameter in it so this mean this can  take three parameter
+    // const my = setInterval(myName,1000,'hi');
+    // clearInterval(my);
+
+
+    //FROM HERE   I tried to take you both button to start and stop the interval
+    let forClear;
+    document.querySelector('#start').addEventListener('click',function(){
+        forClear = setInterval(myName,1000,'hello');
+        console.log("START");
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(forClear);
+        console.log("STOPPED");
+    })
+
+    //https://youtube.com/clip/Ugkx8y6Ug92lkjPWJmq3DTdpvDIZetHQW2N8?si=VgR8uTvcMU4-5B_9s
+</script>
+</html>
