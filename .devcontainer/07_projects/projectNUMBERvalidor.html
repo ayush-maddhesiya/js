@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Valitor</title>
+</head>
+<body>
+    <h2>
+        JavaScript Number Valitor.
+    </h2>
+    <p>Please input  1 to 11 only</p>
+    <input type="text" id="number">
+    <button type="button" onclick="myfunction()">Submit</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function myfunction() {
+        let text ;
+
+       let x = document.getElementById('number').value;
+
+        if( isNaN(x) || x > 11 || x < 1){
+            text = 'Please Enter a valib input.'
+        }
+        else{
+            text = 'Input Accepted.'
+        }
+
+        document.getElementById('demo').innerHTML = text;
+    }
+</script>
+</html>
